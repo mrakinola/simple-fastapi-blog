@@ -7,10 +7,16 @@
 {% endblock %}
 
 {% block page_content %}
-<div class="title">Simple FastAPI Website Home</div>
-<div class="sub-title">Current Page:</div>
+<main role="main" class="container">
+    <div class="row">
+        <div class="col">
+            {{info.simple_text|safe}}
+        </div>
+    </div>
+</main><!-- /.container -->
 
 {{info.page}}
+
 {% endblock %}
 
 {% block scripts %}
