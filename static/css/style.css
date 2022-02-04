@@ -10,7 +10,7 @@
 /* Body text for page */
 .body-text{
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -18,8 +18,8 @@
     padding: 0 30px;
   }
   .body-text div{
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 400;
   }
   
 .wrapper{
@@ -71,12 +71,13 @@ nav .content .links{
 }
 .content .links li a:hover,
 .content .links li label:hover{
-  background: #323c4e;
+  color: cyan;
+  background: #186e54;
 }
 /* Dropdown Menu */
 .content .links ul{
   position: absolute;
-  background: #171c24;
+  background: #0d573b;
   top: 80px;
   z-index: -1;
   opacity: 0;
