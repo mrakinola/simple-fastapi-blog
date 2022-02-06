@@ -9,8 +9,9 @@ def read_markdown(filename: str):
         with open(path, "r", encoding="utf-8") as file_to_read:
             simple_text = file_to_read.read()
     except Exception as e:
+        file_without_markup = filename[:-3]
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND, detail="Markdown Page not found"
+            status_code=status.HTTP_404_NOT_FOUND, detail=f"Markdown page for {file_without_markup} not found"
         )
 
     converted_html = markdown(simple_text)
