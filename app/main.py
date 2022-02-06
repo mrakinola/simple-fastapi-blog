@@ -12,12 +12,12 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/", response_class=HTMLResponse)
-async def homepage(request: Request) -> template.TemplateResponse:
+async def homepage(request: Request):
     info = read_markdown("home.md")
     return template.TemplateResponse("page.html", {"request": request, "info": info})
 
 
 @app.get("/{page_name}", response_class=HTMLResponse)
-async def page(request: Request, page_name: str) -> template.TemplateResponse:
+async def page(request: Request, page_name: str):
     info = read_markdown(page_name + ".md")
     return template.TemplateResponse("page.html", {"request": request, "info": info})
