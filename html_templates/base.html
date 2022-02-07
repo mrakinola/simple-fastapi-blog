@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Simple FastAPI Website">
+    <meta name="author" content="Mr Akinola">
+    <!-- Title and Icon -->
+    <title>{% block title %}{% endblock %} Simple FastAPI Website</title>
+    <link rel="icon" href="{{ url_for('static', path='/images/favicon.ico') }}" sizes="32x32" />
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
+    {% endblock %}
+</head>
+
+<body background="{{ url_for('static', path='/images/dark-wallpaper.jpg') }}">
+    {% include 'navbar.html' %}
+
+    <!-- Page Content  -->
+    <div class="body-text">
+        {% block page_content %}
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>
