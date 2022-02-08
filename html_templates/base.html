@@ -18,13 +18,19 @@
 </head>
 
 <body background="{{ url_for('static', path='/images/dark-wallpaper.jpg') }}">
-    {% include 'navbar.html' %}
-
+    <header class="navigation-bar">
+        {% include 'navbar.html' %}
+    </header>
     <!-- Page Content  -->
     <div class="body-text">
         {% block page_content %}
         {% endblock %}
     </div>
+    <footer class="footer">
+        <a href="https://github.com/mrakinola"><img src="/static/images/github-logo.png" width="24" height="24"></a>
+        <a href="https://www.linkedin.com/in/ebenezer-temi-akinola-ba82111a1"><img src="/static/images/linkedin-logo.png"  width="24" height="24"></a>
+        <p class="copyright">© 2022 Website created by MrAkinola</p>
+    </footer>
 
 </body>
 
