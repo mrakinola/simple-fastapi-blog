@@ -1,4 +1,3 @@
-import imp
 from fastapi import HTTPException, status
 from markdown import markdown
 from os.path import join
@@ -6,7 +5,7 @@ from typing import Text
 
 
 def read_markdown(filename: str) -> dict[str, Text]:
-    path = join("app/page-content", filename)
+    path = join("app/page_content", filename)
     try:
         with open(path, "r", encoding="utf-8") as file_to_read:
             simple_text = file_to_read.read()
