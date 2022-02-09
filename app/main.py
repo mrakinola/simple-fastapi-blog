@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 from .helpers.markdown import read_markdown
 
 
-from app.handlers import generic_page
+from app.handlers import simple_page
 
 app = FastAPI()
 template = Jinja2Templates(directory="html_templates")
@@ -18,4 +18,4 @@ async def homepage(request: Request):
     return template.TemplateResponse("page.html", {"request": request, "info": info})
 
 
-app.include_router(generic_page.router)
+app.include_router(simple_page.router)
