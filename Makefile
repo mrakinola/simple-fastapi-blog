@@ -8,4 +8,4 @@ requirements: ## Install the requirements
 _git-pull: ## Pull the latest changes from git
 	git pull
 
-update-env: _git-pull dev-install ## Make environment up to date
+update-env: _git-pull requirements ## Make environment up to date
