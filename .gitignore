@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VS code extension - markdownlint
+app/page_content/.markdownlint.json
